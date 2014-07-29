@@ -1,0 +1,127 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic,600italic,700italic,900italic);
+
+/* TODO: Use Flexbox */
+
+/*Set Box Sizing Properties + base font and size */
+html {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+p { margin: 0; line-height: 100%; }
+
+ul, li {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.fullWidth { width: 100%; }
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img { max-width: 100%; }
+
+/* Set all headers to Lato */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.clearfix { clear: both; }
+
+.mainContainer {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+.logo h1 { margin: 0; }
+
+.left { float: left; }
+.right { float: right; }
+
+.alignLeft { text-align: left !important; }
+.alignRight { text-align: right !important; }
+.alignCentre { text-align: center !important; }
+
+nav.leftSide > ul > li > ul > li.childNav > ul > li {
+    font-size: 0.8rem;
+    padding-left: 15px;
+}
+
+.off-canvas, .page-wrap {
+    -webkit-transition: left 1s, right 1s;
+    transition: left 1s, right 1s;
+}
+
+.off-canvas {
+    width: 10rem;
+    height: 100%;
+    background-color: #eeeeee;
+    position: fixed;
+    top: 0;
+}
+
+.off-canvas.nav-right {
+    right: -10rem;
+}
+
+.off-canvas.nav-left {
+    left: -10rem;
+}
+
+.off-canvas.nav-left.open {
+    left: 0;
+}
+
+.off-canvas.nav-right.open {
+    right: 0;
+}
+
+.page-wrap {
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.page-wrap.wrap-left {
+    left: 10rem;
+    right: auto;
+}
+
+.page-wrap.wrap-right {
+    right: 10rem;
+    left: -10rem;
+}
+
+nav.off-canvas > ul li {
+    border-bottom: 1px solid green;
+}
+
+nav.off-canvas > ul li:last-child {
+    border-bottom: none;
+}
+
+nav.off-canvas > ul li.navTitle {
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+nav.off-canvas > ul li.navChild {
+    background: #aaaaaa;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+nav.off-canvas > ul > li.navMenu > ul > li.slide {
+    display: none;
+}
