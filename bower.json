@@ -1,5 +1,6 @@
 {
     "name": "OffCanvasMenu",
+    "description": "A responsive off canvas CSS/jQuery menu",
     "version": "0.1.0",
     "dependencies": {
         "jquery": "2.0.3"
